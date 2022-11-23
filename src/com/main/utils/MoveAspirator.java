@@ -9,7 +9,7 @@ public class MoveAspirator {
 
     //function to make the aspirator move depending on the instructions given by the user and
     //making sure that the aspirator does not go beyond the room
-    public void moveAspirator(Room r,Aspirator a, Instructions ins){
+    public Aspirator moveAspirator(Room r,Aspirator a, Instructions ins){
         String instructions = ins.getInstructions();
         if(instructions != null){
             for (int i = 0; i < instructions.length(); i++) {
@@ -63,11 +63,8 @@ public class MoveAspirator {
                 }
                 a.setOrientation(Orientation.valueOf(orientation));
             }
-
         }
-
-        System.out.println("La position finale de l'aspirateur est : x = " + a.getX() + " y = " + a.getY() + " orientation = " + a.getOrientation());
-
+        return a;
     }
 
 }

@@ -28,7 +28,8 @@ public class AspirateurApplication {
         commands.InstructionsInput(ins);
 
         //Calling the moveAspirator function
-        moveAspirator.moveAspirator(r,a,ins);
+        a = moveAspirator.moveAspirator(r,a,ins);
+        System.out.println("La position finale de l'aspirateur est : x = " + a.getX() + " y = " + a.getY() + " orientation = " + a.getOrientation());
 
     }
 }
